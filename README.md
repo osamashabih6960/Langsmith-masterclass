@@ -50,17 +50,17 @@
 
 ## 🌌 About
 
-**LangSmith Masterclass** ek hands-on repository hai jo dikhata hai ki LLM-powered apps ko **LangChain**, **LangGraph** aur **LangSmith** ke saath kaise *build, trace aur evaluate* kiya jaata hai.
+**LangSmith Masterclass** is a hands-on repository that shows how to *build, trace and evaluate* LLM-powered applications using **LangChain**, **LangGraph** and **LangSmith**.
 
-Har example ek **real project** hai jiska poora execution LangSmith dashboard me step-by-step dikhta hai: latency, tokens, inputs, outputs aur errors.
+Every example is a **real project**, and its full execution can be inspected step by step in the LangSmith dashboard: latency, tokens, inputs, outputs and errors.
 
-> 💡 **Goal:** LLM app ko *black box* se *glass box* banana.
+> 💡 **Goal:** Turn your LLM app from a *black box* into a *glass box*.
 
 <div align="center">
 
 | 🔍 **Observe** | 🐞 **Debug** | 🧪 **Evaluate** | 🚀 **Ship** |
 |:--:|:--:|:--:|:--:|
-| Har run ka trace tree | Slow / failed step turant pakdo | Structured scoring & feedback | Confidence ke saath deploy |
+| A trace tree for every run | Spot slow or failing steps instantly | Structured scoring & feedback | Deploy with confidence |
 
 </div>
 
@@ -76,14 +76,14 @@ Har example ek **real project** hai jiska poora execution LangSmith dashboard me
 
 </div>
 
-Video me aap dekhenge:
+In the video you will see:
 
-- 📂 `langsmith-demo` project aur uske saare traces
-- 🌲 Waterfall view: `evaluate_upsc_essay` ke andar parallel nodes
-- ⏱️ Latency, token count aur Input / Output tabs
-- 🏷️ Tags & metadata se runs filter karna
+- 📂 The `langsmith-demo` project and all of its traces
+- 🌲 Waterfall view: the parallel nodes inside `evaluate_upsc_essay`
+- ⏱️ Latency, token counts and the Input / Output tabs
+- 🏷️ Filtering runs with tags & metadata
 
-> 📌 **Note (owner):** Drive file ko **"Anyone with the link → Viewer"** par set karein, warna visitors video nahi dekh paayenge.
+> 📌 **Note (repo owner):** Set the Drive file to **"Anyone with the link → Viewer"**, otherwise visitors won't be able to watch the video.
 
 <br/>
 
@@ -95,7 +95,7 @@ Video me aap dekhenge:
 
 ### 📄 Project 1 · PDF RAG Pipeline
 
-PDF (jaise `islr.pdf`) se sawal pucho, context-grounded jawab pao.
+Ask questions about a PDF (such as `islr.pdf`) and get context-grounded answers.
 
 - 📥 PDF loading & chunking
 - 🧬 `sentence-transformers/all-MiniLM-L6-v2`
@@ -108,7 +108,7 @@ PDF (jaise `islr.pdf`) se sawal pucho, context-grounded jawab pao.
 
 ### ✍️ Project 2 · UPSC Essay Evaluator
 
-**LangGraph** multi-node evaluator, 3 angles par parallel check.
+A **LangGraph** multi-node evaluator that scores an essay from 3 angles in parallel.
 
 - 🧠 `evaluate_analysis`
 - 🗣️ `evaluate_language`
@@ -134,7 +134,7 @@ Prompt → LLM → Parser chains, fully traced.
 
 ### 📡 Project 4 · Observability Toolkit
 
-LangSmith ke core features, practical tarike se.
+The core LangSmith features, learned in a practical way.
 
 - 🔍 Tracing & run tree
 - 🏷️ Tags & metadata
@@ -209,7 +209,7 @@ flowchart TD
     class E,A,G,T,F n;
 ```
 
-> ⚡ Teeno evaluation nodes **parallel** chalte hain, isliye total latency kam hoti hai.
+> ⚡ All three evaluation nodes run **in parallel**, which keeps total latency low.
 
 <br/>
 
@@ -229,15 +229,15 @@ flowchart TD
  └── 🏁 final_evaluation
 ```
 
-| Aap kya dekh sakte hain | Kahan |
-|:------------------------|:------|
-| ⏱️ Har step ki latency | Waterfall view |
+| What you can inspect | Where |
+|:---------------------|:------|
+| ⏱️ Latency of every step | Waterfall view |
 | 🪙 Token usage | Run details |
-| 📥📤 Input / Output | Input & Output tabs |
+| 📥📤 Inputs / Outputs | Input & Output tabs |
 | 🏷️ Tags: `langgraph` `essay` `evaluation` `groq` `pdf` | Filter sidebar |
 | ❌ Errors & failed runs | Status filter |
 
-<!-- 📸 Screenshots add karne ke liye uncomment karein:
+<!-- 📸 To add screenshots, upload them to an assets/ folder and uncomment:
 <p align="center">
   <img src="assets/trace-essay.png" width="90%" alt="Essay evaluator trace"/>
 </p>
@@ -254,7 +254,7 @@ git clone https://github.com/osamashabih6960/Langsmith-masterclass.git
 cd Langsmith-masterclass
 ```
 
-**2️⃣ Virtual environment**
+**2️⃣ Create a virtual environment**
 
 ```bash
 # macOS / Linux
@@ -270,7 +270,7 @@ python -m venv venv && venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**4️⃣ Environment variables** (root me `.env` banayein)
+**4️⃣ Set environment variables** (create a `.env` file in the project root)
 
 ```env
 LANGCHAIN_TRACING_V2=true
@@ -282,19 +282,19 @@ GROQ_API_KEY=your_groq_api_key
 > 🔑 LangSmith key: [smith.langchain.com](https://smith.langchain.com) → **Settings → API Keys**
 > 🔑 Groq key: [console.groq.com](https://console.groq.com)
 
-**5️⃣ Run & Trace**
+**5️⃣ Run & trace**
 
 ```bash
-python your_script_name.py     # apni file ka naam likhein
+python your_script_name.py     # replace with your file name
 ```
 
-Phir [smith.langchain.com](https://smith.langchain.com) → **Tracing → `langsmith-demo`** kholein. 🎉
+Then open [smith.langchain.com](https://smith.langchain.com) → **Tracing → `langsmith-demo`**. 🎉
 
 <br/>
 
 ## 📁 Project Structure
 
-> ⚠️ Template hai. Apne actual folders/files ke hisaab se edit karein.
+> ⚠️ This is a template. Edit it to match your actual folders and files.
 
 ```text
 Langsmith-masterclass/
@@ -343,27 +343,27 @@ A: Linear regression is a simple approach for predicting a quantitative response
 ## 🩺 Troubleshooting
 
 <details>
-<summary><b>Traces LangSmith me nahi dikh rahe</b></summary>
+<summary><b>Traces are not showing up in LangSmith</b></summary>
 
-- `.env` me `LANGCHAIN_TRACING_V2=true` aur sahi `LANGCHAIN_API_KEY` check karein
-- Dashboard me time filter **Last 1 day** rakhein aur sahi project (`langsmith-demo`) select karein
-- `load_dotenv()` script ke shuru me call hona chahiye
-
-</details>
-
-<details>
-<summary><b>RAG baar-baar "I don't know" deta hai</b></summary>
-
-- Question PDF ke content se related hona chahiye
-- `chunk_size` / `chunk_overlap` aur retriever ka `k` badhakar try karein
-- LangSmith me `VectorStoreRetriever` run kholkar dekhein ki kaunsa context mila
+- Check that `.env` contains `LANGCHAIN_TRACING_V2=true` and a valid `LANGCHAIN_API_KEY`
+- In the dashboard, keep the time filter on **Last 1 day** and select the right project (`langsmith-demo`)
+- Make sure `load_dotenv()` is called at the very top of your script
 
 </details>
 
 <details>
-<summary><b>Pehli run bahut slow hai (1–2 min)</b></summary>
+<summary><b>RAG keeps answering "I don't know"</b></summary>
 
-Pehli baar embedding model download aur PDF indexing hoti hai. Uske baad queries fast chalti hain.
+- The question must relate to the content of the PDF
+- Try increasing `chunk_size`, `chunk_overlap` and the retriever's `k`
+- Open the `VectorStoreRetriever` run in LangSmith to see which context was retrieved
+
+</details>
+
+<details>
+<summary><b>The first run is very slow (1–2 minutes)</b></summary>
+
+On the first run the embedding model is downloaded and the PDF is indexed. After that, queries are fast.
 
 </details>
 
@@ -384,11 +384,13 @@ Pehli baar embedding model download aur PDF indexing hoti hai. Uske baad queries
 
 ## 🤝 Contributing
 
+Contributions are welcome! 🙌
+
 ```bash
 git checkout -b feature/amazing-idea
 git commit -m "✨ Add amazing idea"
 git push origin feature/amazing-idea
-# phir Pull Request open karein 🙌
+# then open a Pull Request
 ```
 
 <br/>
@@ -412,7 +414,7 @@ git push origin feature/amazing-idea
 
 <br/><br/>
 
-⭐ **Agar repo pasand aaya to ek star zaroor dein!** ⭐
+⭐ **If you like this repo, please give it a star!** ⭐
 
 <br/>
 
