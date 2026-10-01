@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="LangSmith Masterclass" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=270&section=header&color=gradient&customColorList=12,20,24,30&text=LangSmith%20Masterclass&fontSize=56&fontColor=ffffff&fontAlign=50&fontAlignY=36&desc=Trace%20%E2%80%A2%20Debug%20%E2%80%A2%20Evaluate%20%E2%80%A2%20Ship%20LLM%20Apps&descSize=20&descAlign=50&descAlignY=58&animation=fadeIn" width="100%" alt="LangSmith Masterclass"/>
 
 <br/>
 
@@ -305,7 +305,7 @@ Langsmith-masterclass/
 ├── 📂 essay_evaluator/      # LangGraph UPSC evaluator
 ├── 📂 chains/               # RunnableSequence examples
 ├── 📂 data/                 # PDFs (islr.pdf, ...)
-└── 📂 assets/               # banner.svg, screenshots
+└── 📂 assets/               # screenshots
 ```
 
 <br/>
